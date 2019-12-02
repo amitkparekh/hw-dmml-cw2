@@ -1,0 +1,99 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.UserClassifier 
+Relation:     Best_2_train_9000
+Instances:    3660
+Attributes:   10
+              1328
+              840
+              1419
+              1518
+              1555
+              1366
+              888
+              1370
+              1371
+              2304
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+
+Split on 1328 AND 840 (In Set)
+|   Split on 1370 AND 1518 (In Set): N13 3(332.0/27.0)
+|   Split on 1370 AND 1518 (Not in Set)
+|   |   Split on 1419 AND 888 (In Set)
+|   |   |   Split on 1555 AND 840 (In Set): N25 4(562.0/136.0)
+|   |   |   Split on 1555 AND 840 (Not in Set)
+|   |   |   |   Split on 1328 AND 1419 (In Set): N27 2(163.0/67.0)
+|   |   |   |   Split on 1328 AND 1419 (Not in Set)
+|   |   |   |   |   Split on 1555 AND 1366 (In Set): N29 5(548.0/71.0)
+|   |   |   |   |   Split on 1555 AND 1366 (Not in Set)
+|   |   |   |   |   |   Split on 840 AND 1518 (In Set): N31 4(113.0/76.0)
+|   |   |   |   |   |   Split on 840 AND 1518 (Not in Set)
+|   |   |   |   |   |   |   Split on 1370 AND 888 (In Set)
+|   |   |   |   |   |   |   |   Split on 1370 AND 1366 (In Set): N37 1(371.0/164.0)
+|   |   |   |   |   |   |   |   Split on 1370 AND 1366 (Not in Set): N38 0(426.0/220.0)
+|   |   |   |   |   |   |   Split on 1370 AND 888 (Not in Set): N36 5(124.0/31.0)
+|   |   Split on 1419 AND 888 (Not in Set)
+|   |   |   Split on 1555 AND 1370 (In Set)
+|   |   |   |   Split on 1370 AND 1371 (In Set): N23 8(536.0/61.0)
+|   |   |   |   Split on 1370 AND 1371 (Not in Set): N24 6(93.0/7.0)
+|   |   |   Split on 1555 AND 1370 (Not in Set): N22 4(116.0/19.0)
+Split on 1328 AND 840 (Not in Set)
+|   Split on 1370 AND 1366 (In Set)
+|   |   Split on 1518 AND 888 (In Set)
+|   |   |   Split on 1555 AND 1419 (In Set)
+|   |   |   |   Split on 1518 AND 840 (In Set): N11 5(6.0)
+|   |   |   |   Split on 1518 AND 840 (Not in Set): N12 6(109.0/15.0)
+|   |   |   Split on 1555 AND 1419 (Not in Set): N10 9(6.0/3.0)
+|   |   Split on 1518 AND 888 (Not in Set): N8 8(49.0/14.0)
+|   Split on 1370 AND 1366 (Not in Set)
+|   |   Split on 840 AND 1370 (In Set): N5 9(92.0/11.0)
+|   |   Split on 840 AND 1370 (Not in Set): N6 3(14.0)
+
+Time taken to build model: 1884.72 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.07 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        8587               65.2012 %
+Incorrectly Classified Instances      4583               34.7988 %
+Kappa statistic                          0.5998
+Mean absolute error                      0.0885
+Root mean squared error                  0.2242
+Relative absolute error                 51.1332 %
+Root relative squared error             76.177  %
+Total Number of Instances            13170     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.496    0.079    0.438      0.496    0.466      0.395    0.876     0.390     0
+                 0.352    0.055    0.526      0.352    0.422      0.353    0.833     0.427     1
+                 0.484    0.058    0.225      0.484    0.308      0.297    0.867     0.166     2
+                 0.791    0.008    0.921      0.791    0.851      0.839    0.944     0.794     3
+                 0.797    0.075    0.676      0.797    0.731      0.677    0.892     0.659     4
+                 0.675    0.034    0.804      0.675    0.734      0.688    0.850     0.653     5
+                 0.769    0.025    0.675      0.769    0.719      0.701    0.944     0.663     6
+                 0.000    0.000    ?          0.000    ?          ?        0.833     0.132     7
+                 0.821    0.046    0.779      0.821    0.800      0.759    0.916     0.727     8
+                 0.703    0.015    0.526      0.703    0.602      0.598    0.883     0.489     9
+Weighted Avg.    0.652    0.047    ?          0.652    ?          ?        0.885     0.590     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j   <-- classified as
+  723  452  115   20   58   67    7    0    5   10 |    a = 0
+  678  681   95   12  212  174   31    0   38   15 |    b = 1
+  138   22  216   16   19    4    2    0   29    0 |    c = 2
+   43   12   29 1074  170    4    3    0    6   16 |    d = 3
+   34   51    6   28 1726   66   30    0  157   67 |    e = 4
+   25   38  462    3   64 1510   32    0   90   14 |    f = 5
+    0    5    6    1    7   22  643    0  109   43 |    g = 6
+    4   26   17    0  102    1   13    0   75    0 |    h = 7
+    1    8    9   12  124   27  185    0 1801   27 |    i = 8
+    3    0    3    0   73    4    6    0    1  213 |    j = 9
